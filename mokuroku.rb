@@ -39,5 +39,5 @@ tes.each {|t, e|
    }
  }
  w.close
- system "gzip -9 /var/www/htdocs/xyz/#{t}/mokuroku.csv"
+ system "gzip -9f /var/www/htdocs/xyz/#{t}/mokuroku.csv"
 }
