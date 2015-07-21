@@ -64,6 +64,6 @@ $tes.each {|t, e|
       }
     }
   }
-  w.close unles DRY_RUN
+  w.close unless DRY_RUN
   system "gzip -9f /var/www/htdocs/xyz/#{t}/mokuroku.csv" unless DRY_RUN
 }
