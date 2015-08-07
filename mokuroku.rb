@@ -33,6 +33,7 @@ end
   }
 }
 
+$tes.uniq!
 $tes.each {|t, e|
   dst_path = "/var/www/htdocs/xyz/#{t}/mokuroku.csv"
   next if File.exist?(dst_path + ".gz") if APPENDING
