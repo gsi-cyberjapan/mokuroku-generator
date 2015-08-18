@@ -50,7 +50,7 @@ $tes.each {|t, e|
       ys = Dir.entries("#{$src_dir}/#{t}/#{z}/#{x}").
         map{|v| v.split('.')[0]}.
         sort{|a, b| a.to_i <=> b.to_i}.
-        select{|v| v.to_i.to_s == v}
+        select{|v| v.to_i.to_s == v}.uniq
       sleep 10 if File.exist?('sleep')
       ys.each {|y|
         path = "#{$src_dir}/#{t}/#{z}/#{x}/#{y}.#{e}"
